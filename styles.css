@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray-background: hsl(0, 0%, 95%);
+  --font-family-normal: "Lexend Deca", sans-serif;
+  --font-family-bold: "Big Shoulders Display", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(3, 18.75rem);
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 1.5rem;
+}
+
+.car-img {
+  width: 3.43rem;
+  height: 2rem;
+}
+
+.card .col {
+  padding: 2.5rem;
+}
+
+.col.orange {
+  background-color: var(--bright-orange);
+}
+
+.col.blue {
+  background-color: var(--dark-cyan);
+}
+
+.col.green {
+  background-color: var(--very-dark-cyan);
+}
+
+.col .car-type {
+  font-size: 2rem;
+  font-family: var(--font-family-bold);
+  text-transform: uppercase;
+  color: var(--very-light-gray-background);
+  margin: 1.3rem 0;
+}
+
+.col .car-info {
+  font-size: 0.9375rem;
+  font-family: var(--font-family-normal);
+  color: var(--transparent-white-paragraphs);
+  line-height: 1.4;
+  margin-right: 0.6rem;
+  margin-bottom: 5rem;
+}
+
+.col .btn-info {
+  border: 0;
+  outline: 0;
+  font-size: 0.9375rem;
+  border: 2px solid var(--very-light-gray-background);
+  background-color: var(--very-light-gray-background);
+  padding: 0.8em 1.5em;
+  border-radius: 200px;
+}
+
+.col .btn-info:hover {
+  background-color: transparent;
+  color: var(--very-light-gray-background);
+  cursor: pointer;
+}
+
+.btn-info.bg-color-1 {
+  color: var(--bright-orange);
+}
+
+.btn-info.bg-color-2 {
+  color: var(--dark-cyan);
+}
+
+.btn-info.bg-color-3 {
+  color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 40.625rem) {
+  .card {
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  }
+
+  .col .car-info {
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+}
